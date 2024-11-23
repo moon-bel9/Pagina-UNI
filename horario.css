@@ -1,0 +1,300 @@
+/*index.html*/
+
+/* General */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: margin-left 0.3s ease;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: #224fb1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px; /* Ajuste de padding */
+    font-size: 18px; /* Ajuste de tamaño de fuente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    transition: margin-left 0.3s ease;
+}
+
+/* Cuando el menú está activo, mover la barra superior */
+.barra-superior.menu-active {
+    margin-left: 240px; /* Ajustado para coincidir con el ancho de la barra lateral */
+}
+
+body.menu-active {
+    margin-left: 240px; /* Ancho de la barra lateral */
+}
+
+/* Nombre del docente */
+.nombre-docente {
+    margin-left: 15px; /* Ajuste de margen */
+}
+
+.nombre-docente h1 {
+    margin: 0;
+    font-size: 18px; /* Ajuste de tamaño de fuente */
+    font-weight: 500;
+}
+
+/* Botón de acción */
+.boton-accion {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+.boton-accion i {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.boton-accion:hover {
+    color: #eaf5ea;
+}
+
+/* Barra lateral */
+.barra-menu {
+    background-color: #f4f5f7;
+    color: #000000;
+    width: 240px; /* Ajuste de ancho */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 10px; /* Ajuste de padding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+/* Menú activo */
+.barra-menu.active {
+    transform: translateX(0);
+}
+
+/* Lista del menú */
+.barra-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-menu ul li {
+    position: relative;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.barra-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px; /* Ajuste de padding */
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px; /* Ajuste de tamaño de fuente */
+    transition: background-color 0.3s ease;
+}
+
+.barra-menu ul li a:hover {
+    background-color: #e1e5eb;
+}
+
+/* Título y icono de barra lateral */
+.barra-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Ajuste de margen */
+}
+
+.barra-info .logo {
+    width: 35px; /* Ajuste de tamaño */
+    height: auto;
+    margin-right: 8px;
+}
+
+.barra-info .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-info h2 {
+    margin: 0;
+    font-size: 16px; /* Ajuste de tamaño de fuente */
+    font-weight: 700;
+}
+
+.barra-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Iconos y flechas del menú */
+.barra-menu ul li a i {
+    margin-right: 8px; /* Ajuste de margen */
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    padding-left: 10px; /* Ajuste de padding */
+}
+
+.submenu li a {
+    padding: 6px; /* Ajuste de padding */
+    font-size: 12px; /* Ajuste de tamaño de fuente */
+}
+
+.submenu.active {
+    display: block;
+    max-height: 500px;
+}
+
+.submenu li a:hover {
+    background-color: #eaeaea;
+}
+
+/*termina*/
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.class {
+    background-color: #a4dff6;
+    position: relative;
+}
+
+.class span {
+    display: block;
+}
+
+.class-icon {
+    margin-right: 5px;
+}
+
+.class-time {
+    font-size: 12px;
+    color: #666;
+}
+
+
+.main-content h2 {
+    margin-top: 30px;
+}
+
+.hora_clase-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nota-y-pdf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nota {
+    margin-bottom: 5px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.hora_clase-actions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.select-definitivo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select-definitivo select {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.select-definitivo h5 {
+    margin: 0;
+}
+
+.carga-horaria {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #aeb3b9;
+}

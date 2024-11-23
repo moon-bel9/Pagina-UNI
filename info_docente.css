@@ -1,0 +1,260 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: margin-left 0.3s ease;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: #224fb1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    transition: margin-left 0.3s ease;
+}
+
+/* Cuando el menú está activo, mover la barra superior */
+.barra-superior.menu-active {
+    margin-left: 260px;
+}
+
+body.menu-active {
+    margin-left: 250px; /* Ancho de la barra lateral ajustado para que sea consistente */
+}
+
+/* Nombre del docente */
+.nombre-docente {
+    margin-left: 15px;
+}
+
+.nombre-docente h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Botón de acción */
+.boton-accion {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+.boton-accion i {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.boton-accion:hover {
+    color: #eaf5ea;
+}
+
+/* Barra lateral */
+.barra-menu {
+    background-color: #f4f5f7;
+    color: #000000;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+/* Menú activo */
+.barra-menu.active {
+    transform: translateX(0);
+}
+
+/* Lista del menú */
+.barra-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-menu ul li {
+    position: relative;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.barra-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.barra-menu ul li a:hover {
+    background-color: #e1e5eb;
+}
+
+/* Título y icono de barra lateral */
+.barra-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.barra-info .logo {
+    width: 35px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.barra-info .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-info h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.barra-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Iconos y flechas del menú */
+.barra-menu ul li a i {
+    margin-right: 8px;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    padding-left: 10px;
+}
+
+.submenu li a {
+    padding: 6px;
+    font-size: 12px;
+}
+
+.submenu.active {
+    display: block;
+    max-height: 500px;
+}
+
+.submenu li a:hover {
+    background-color: #eaeaea;
+}
+
+
+
+/*Informacion de docente*/
+.perfil-docente{
+padding: 75px 50px;
+}
+.info-texto{
+    padding-left: 120px;
+    margin-top: -120px; 
+}
+
+.info-docente img{
+    width: 110px;
+    height: auto;
+}
+
+.info-texto h2, 
+.info-texto h4,
+.info-texto span {
+    margin: 0; /* Elimina los margenes predeterminados */
+    padding: 3px 0; /* Ajusta el espacio entre los elementos */
+}
+
+span.actualizar, span.historial {
+    margin-right: 10px; /* Agrega espacio entre Actualizar y Historial*/
+}
+
+ .info-texto h4{
+    color: #224fb1;
+ }
+
+ .info-texto span{
+    color: #555;
+ }
+
+ .botones-primarios {
+    margin-top: 10px;
+}
+
+.botones-primarios button{
+    background-color: #ffffff;
+    border: solid 1px rgb(190, 181, 181);
+    padding: 10px 15px;
+    margin-left: 4px;
+    margin-right: 35px;
+    margin-top: -5px;
+}
+.botones-secundarios {
+    margin-top: 10px;
+}
+
+.botones-secundarios button,
+.botones-primarios  {
+    padding: 1px;
+    font-size: 1em;
+}
+
+.botones-secundarios .boton-pdf{
+    border: solid 2px #eb0909;
+    border-radius: 4px;/*hace que las esquinas del margen sean curvadas*/
+    padding: 5px;/*Hace espacio dentreo del borde del boton*/
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #eb0909;  
+}
+
+.botones-secundarios .cargar{
+    border: solid 2px rgb(23, 133, 23);
+    border-radius: 5px;/*hace que las esquinas del margen sean curvadas*/
+    background-color: #ffffff;
+    padding: 6px;
+    color: rgb(23, 133, 23) ;
+
+}
+
+
