@@ -1,65 +1,26 @@
 [
-  {
-      "day": "Martes",
-      "time": "08-09",
-      "subject": "MC510-C/D",
-      "location": "Virtual",
-      "type": "T",
-      "capacity": 35,
-      "duration": 2
-  },
-  {
-      "day": "Martes",
-      "time": "10-11",
-      "subject": "MC510-E",
-      "location": "Virtual",
-      "type": "T",
-      "capacity": 12,
-      "duration":2
-  },
-  {
-      "day": "Miercoles",
-      "time": "08-09",
-      "subject": "MC510-E",
-      "location": "Virtual",
-      "type": "P",
-      "capacity": 12,
-      "duration":3
-  },
-  {
-      "day": "Viernes",
-      "time": "08-09",
-      "subject": "BICO1-F",
-      "location": "Virtual",
-      "type": "T",
-      "capacity": 25,
-      "duration":1
-  },
-  {
-      "day": "Viernes",
-      "time": "09-10",
-      "subject": "BICO1-F",
-      "location": "Virtual",
-      "type": "P",
-      "capacity": 25,
-      "duration":2
-  },
-  {
-      "day": "Miercoles",
-      "time": "17-18",
-      "subject": "MB545-C",
-      "location": "Virtual",
-      "type": "T",
-      "capacity": 55,
-      "duration":3
-  },
-  {
-      "day": "Viernes",
-      "time": "14-15",
-      "subject": "MB545-C",
-      "location": "Virtual",
-      "type": "P",
-      "capacity": 55,
-      "duration":3
-  }
+    {
+        "id": 1,
+        "codCurso": "BIF01",
+        "nomCurso": "Biología",
+        "secCurso": "C",
+        "codDocente": 87546374,
+        "docente": "Prof. García",
+        "teopra": "T",
+        "hora": "10-12",
+        "dia": "MI",
+        "semestre": 20242
+    },
+    {
+        "id": 2,
+        "codCurso": "MAT02",
+        "nomCurso": "Matemáticas Avanzadas",
+        "secCurso": "A",
+        "codDocente": 12345678,
+        "docente": "Dr. Pérez",
+        "teopra": "T",
+        "hora": "08-10",
+        "dia": "LU",
+        "semestre": 20241
+    }
 ]

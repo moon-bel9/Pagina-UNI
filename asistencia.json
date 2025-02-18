@@ -6,36 +6,24 @@
         "codCurso": "BMA03",
         "secCurso": "A",
         "teopra": "T/P",
-        "hora": "15-17", 
+        "hora": "15-17",
         "horEntrada": "15:05:34",
         "horSalida": "17:10:56",
-        "semestre": "20242",
+        "semestre": 20242,
         "estado": 1
     },
     {
         "id": 2,
         "codDocente": 87546374,
-        "fecha": "2024-10-06",
+        "fecha": "2024-10-07",
         "codCurso": "BMA04",
         "secCurso": "B",
-        "teopra": "P",
-        "hora": "10-12",
-        "horEntrada": "10:05:20",
-        "horSalida": "12:05:00",
-        "semestre": "20242",
-        "estado": 1
-    },
-    {
-        "id": 3,
-        "codDocente": 87546374,
-        "fecha": "2024-10-07",
-        "codCurso": "BMA05",
-        "secCurso": "C",
         "teopra": "T",
-        "hora": "8-10",
-        "horEntrada": "08:10:00",
-        "horSalida": "09:50:00",
-        "semestre": "20242",
-        "estado": 0
+        "hora": "10-12",
+        "horEntrada": "10:02:12",
+        "horSalida": "12:15:45",
+        "semestre": 20242,
+        "estado": 1
     }
 ]
+

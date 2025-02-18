@@ -6,6 +6,8 @@
     <link rel="icon" href="img/uni.png">
     <link rel="stylesheet" href="info_docente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
     <title>UNI | EARPFIM</title>
 </head>
@@ -96,7 +98,437 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+    <div class="border-b mt-4">
+        <nav class="flex space-x-4">
+            <button class="tab-button text-blue-500 font-semibold active" data-tab="1er">1er</button>
+            <button class="tab-button text-gray-500" data-tab="2do">2do</button>
+            <button class="tab-button text-gray-500" data-tab="3er">3er</button>
+            <button class="tab-button text-gray-500" data-tab="4to">4to</button>     
+        </nav>
+    </div>
+    
+    <!-- Contenido de cada pestaña -->
+    <div id="1er" class="tab-content block">
+        <form>
+            <h1>1. Datos Personales</h1>
+            <!-- Género, Fecha de nacimiento, DNI y botones de acción -->
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" style="display: inline-block; margin-right: 10px;">
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+            </select>
+            
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" style="display: inline-block;">
+            
+            <!-- Iconos de acción -->
+            <button type="button" title="Guardar" style="display: inline-block; margin-left: 10px;">
+              <i class="fas fa-save"></i> Guardar
+            </button>
+            <button type="button" title="Ver" style="display: inline-block; margin-left: 10px;">
+              <i class="fas fa-eye"></i> Ver
+            </button>
+            <button type="button" title="Eliminar" style="display: inline-block; margin-left: 10px;">
+              <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+          
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Teléfono fijo y celular -->
+            <label for="telefono-fijo">Teléfono fijo:</label>
+            <input type="tel" id="telefono-fijo" name="telefono-fijo" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" style="display: inline-block;">
+            
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- RUC y Libreta Militar -->
+            <label for="ruc">RUC:</label>
+            <input type="text" id="ruc" name="ruc" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="libreta-militar">Libreta Militar:</label>
+            <input type="text" id="libreta-militar" name="libreta-militar" style="display: inline-block;">
+            
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Brevete y Categoría -->
+            <label for="brevete">Brevete:</label>
+            <input type="text" id="brevete" name="brevete" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" style="display: inline-block;">
+            
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Vehículo -->
+            <label for="vehiculo">¿Cuenta con vehículo?</label>
+            <select id="vehiculo" name="vehiculo" style="display: inline-block; margin-right: 10px;">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+            
+            <!-- Datos del vehículo -->
+            <div id="vehiculo-info" style="display: inline-block;">
+              <label for="modelo">Modelo:</label>
+              <input type="text" id="modelo" name="modelo" style="display: inline-block; margin-right: 10px;">
+              
+              <label for="placa">Placa:</label>
+              <input type="text" id="placa" name="placa" style="display: inline-block; margin-right: 10px;">
+              
+              <label for="anio">Año:</label>
+              <input type="text" id="anio" name="anio" style="display: inline-block; margin-right: 10px;">
+              
+              <label for="color">Color:</label>
+              <input type="text" id="color" name="color" style="display: inline-block;">
+            </div>
+          
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Estado Civil, Fecha de Matrimonio y Grupo Sanguíneo -->
+            <label for="estado-civil">Estado Civil:</label>
+            <select id="estado-civil" name="estado-civil" style="display: inline-block; margin-right: 10px;">
+              <option value="soltero">Soltero</option>
+              <option value="casado">Casado</option>
+              <option value="divorciado">Divorciado</option>
+              <option value="viudo">Viudo</option>
+            </select>
+          
+            <label for="fecha-matrimonio">Fecha de Matrimonio:</label>
+            <input type="date" id="fecha-matrimonio" name="fecha-matrimonio" style="display: inline-block; margin-right: 10px;">
+          
+            <label for="grupo-sanguineo">Grupo Sanguíneo:</label>
+            <input type="text" id="grupo-sanguineo" name="grupo-sanguineo" style="display: inline-block;">
+            
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Emails -->
+            <label for="emails">Emails:</label>
+            <input type="email" id="emails" name="emails" style="display: inline-block; margin-right: 10px;" placeholder="Introduce un email">
+            
+            <button type="button" title="Añadir Email" style="display: inline-block;">
+              <i class="fas fa-plus-circle"></i> Añadir Email
+            </button>
+          </form>
+          <form>
+            <!-- Título de Lugar de Nacimiento -->
+            <h1>Lugar de Nacimiento</h1>
+          
+            <!-- País y Departamento -->
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento" style="display: inline-block;">
+            
+            <br><br> <!-- Espacio entre los campos -->
+            
+            <!-- Provincia y Distrito -->
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" style="display: inline-block; margin-right: 10px;">
+            
+            <label for="distrito">Distrito:</label>
+            <input type="text" id="distrito" name="distrito" style="display: inline-block;">
+          </form>
+          <form>
+            <h2>Domicilio</h2>
+            <button id="abrir-formulario" class="boton-accion">
+                Añadir Registro
+            </button>
+            <table></table>
+            <!-- Formulario emergente oculto -->
+            <div id="formulario-popup" class="popup">
+                <div class="popup-contenido">
+                    <span class="cerrar">&times;</span>
+                    <h2>Agregar Domicilio</h2>
+                    <form>
+                        <h2>Agregar Domicilio</h2>
+                        <label>País:
+                            <select>
+                                <option>Perú</option>
+                            </select>
+                        </label>
+                        <label>Departamento:
+                            <select>
+                                <option>Áncash</option>
+                            </select>
+                        </label>
+                        <label>Provincia:
+                            <select>
+                                <option>Aija</option>
+                            </select>
+                        </label>
+                        <label>Distrito:
+                            <select>
+                                <option>Coris</option>
+                            </select>
+                        </label>
+                        <label>Tipo de Vía:
+                            <select>
+                                <option>Seleccionar</option>
+                            </select>
+                        </label>
+                        <label>Nombre de la Vía:
+                            <input type="text">
+                        </label>
+                        <label>Tipo:
+                            <select>
+                                <option>Seleccionar</option>
+                            </select>
+                        </label>
+                        <label>Número de Inmueble:
+                            <input type="text">
+                        </label>
+                        <label>Tipo de Zona:
+                            <select>
+                                <option>Seleccionar</option>
+                            </select>
+                        </label>
+                        <label>Nombre de la Zona:
+                            <input type="text">
+                        </label>
+                        <button type="submit">Guardar</button>
+                        <button type="reset">Cancelar</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <!-- Sección 1.1 - Personas a comunicar en caso de emergencia -->
+            <form>
+                <h1>1.1.- Personas a comunicar en caso de emergencia</h1>
+            <!-- Contacto 1 -->
+            <label for="contacto1-nombre">Contacto 1 - Apellidos y Nombre:</label>
+            <input type="text" id="contacto1-nombre" name="contacto1-nombre" style="margin-right: 10px;">
+            
+            <label for="contacto1-parentesco">Parentesco:</label>
+            <input type="text" id="contacto1-parentesco" name="contacto1-parentesco" style="margin-right: 10px;">
+            
+            <label for="contacto1-celular">Celular:</label>
+            <input type="tel" id="contacto1-celular" name="contacto1-celular">
+            
+            <br><br>
+            
+            <!-- Contacto 2 -->
+            <label for="contacto2-nombre">Contacto 2 - Apellidos y Nombre:</label>
+            <input type="text" id="contacto2-nombre" name="contacto2-nombre" style="margin-right: 10px;">
+            
+            <label for="contacto2-parentesco">Parentesco:</label>
+            <input type="text" id="contacto2-parentesco" name="contacto2-parentesco" style="margin-right: 10px;">
+            
+            <label for="contacto2-celular">Celular:</label>
+            <input type="tel" id="contacto2-celular" name="contacto2-celular">
+            
+            <br><br>
+            <!-- Contacto 3 -->
+             <label for="contacto3-nombre">Contacto 3 - Apellidos y Nombre:</label>
+            <input type="text" id="contacto3-nombre" name="contacto3-nombre" style="margin-right: 10px;">
+            
+            <label for="contacto3-parentesco">Parentesco:</label>
+            <input type="text" id="contacto3-parentesco" name="contacto3-parentesco" style="margin-right: 10px;">
+            
+            <label for="contacto3-celular">Celular:</label>
+            <input type="tel" id="contacto3-celular" name="contacto3-celular">
+            </form>
+        </div>
+
+
+        <div id="2do" class="tab-content hidden">
+            <form class="container">
+                <h1>2.- DATOS LABORALES</h1>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="condicion">Condición (C/N):</label>
+                        <select id="condicion" class="form-control">
+                            <option>Contratado</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" class="form-control">
+                            <option>Planilla</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="dedicacion">Dedicación:</label>
+                        <select id="dedicacion" class="form-control">
+                            <option>B1</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="horasLectivas">Horas lectivas:</label>
+                        <input type="text" id="horasLectivas" class="form-control" value="16" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="horas">Horas:</label>
+                        <input type="text" id="horas" class="form-control" value="32" readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fechaIngresoFIM">Fecha Ingreso FIM:</label>
+                        <input type="date" id="fechaIngresoFIM" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="fechaNombramiento">Fecha Nombramiento:</label>
+                        <input type="date" id="fechaNombramiento" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="regimenPensionario">Régimen Pensionario:</label>
+                        <select id="regimenPensionario" class="form-control">
+                            <option>AFP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="afpNombre">AFP (Nombre):</label>
+                        <input type="text" id="afpNombre" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="codAFP">Cód. AFP:</label>
+                        <input type="text" id="codAFP" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="codEsSalud">Cód. EsSalud:</label>
+                        <input type="text" id="codEsSalud" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="otroSeguro">Otro Tipo de Seguro:</label>
+                        <input type="text" id="otroSeguro" class="form-control" value="-" readonly>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="3er" class="tab-content hidden">
+            <div class="contenido-pestaña">
+                <h1>3.- DATOS DE FORMACIÓN PROFESIONAL</h1>
+                <button id="mostrarFormularioBtn">AÑADIR REGISTRO</button>
+        
+            <form id="mostrarFormulariofor" class="formulario-flotante">
+                <h2>Agregar Formación Profesional</h2>
+                <label>Formación profesional</label>
+                <select>
+                    <option>Seleccionar</option>
+                </select>
+        
+                <label>País</label>
+                <select>
+                    <option>Seleccionar</option>
+                </select>
+        
+                <label>Universidad</label>
+                <input type="text" placeholder="Ingrese la universidad">
+        
+                <label>Especialidad</label>
+                <input type="text" placeholder="Ingrese la especialidad">
+        
+                <label>Fecha Inicio</label>
+                <input type="date">
+        
+                <label>Fecha Final</label>
+                <input type="date">
+        
+                <label>Grado Obtenido</label>
+                <input type="text" placeholder="Ingrese el grado">
+        
+                <label>Documento sustentatorio</label>
+                <input type="file">
+        
+                <label>Observación</label>
+                <textarea placeholder="Ingrese una observación"></textarea>
+        
+                <button type="submit">GUARDAR</button>
+                <button type="button" id="cancelarFormularioBtn">CANCELAR</button>
+            </form>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>Orden</th>
+                        <th>Formación Profesional</th>
+                        <th>País</th>
+                        <th>Universidad</th>
+                        <th>Especialidad</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Final</th>
+                        <th>Grado Obtenido</th>
+                        <th>Documento sustentatorio</th>
+                        <th>Observación</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Título Profesional</td>
+                        <td>Perú</td>
+                        <td>UNIVERSIDAD NACIONAL DE INGENIERÍA</td>
+                        <td>Ingeniero en la especialidad de Ingeniería Me</td>
+                        <td>08/08/93</td>
+                        <td>12/12/99</td>
+                        <td>Titulado</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn-edit">✏️</button>
+                            <button class="btn-delete">➖</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Maestría</td>
+                        <td>Perú</td>
+                        <td>PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ</td>
+                        <td>Estudios completos de maestría en Ingeniería</td>
+                        <td>04/04/02</td>
+                        <td>12/12/06</td>
+                        <td>Magíster</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn-edit">✏️</button>
+                            <button class="btn-delete">➖</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Maestría</td>
+                        <td>Perú</td>
+                        <td>UNIVERSIDAD ANTONIO RUIZ DE MONTOYA</td>
+                        <td>Maestría en educación con mención en docencia</td>
+                        <td>03/03/17</td>
+                        <td>12/12/19</td>
+                        <td>Magíster</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn-edit">✏️</button>
+                            <button class="btn-delete">➖</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+    <div id="4to" class="tab-content hidden">Contenido del 4to ciclo</div>
+<div id="datos"></div>
+       
+          </div>        
+</div>
 
 <script src="info_docente.js"></script>
 </body>
